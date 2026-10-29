@@ -426,7 +426,7 @@ function debugRender() {
 function keyPressed() {
   if (key == "`") { debug = !debug; }
   if (key == "=") { world.zoom++; }
-  if (key == "-") { world.zoom--; } }
+  if (key == "-") { world.zoom--; }
   if (key == ".") { run(); }
 
   if (key == " ") { if (game.mode == "Menu") { game.mode = "Brawl" } else game.mode = "Menu" }
