@@ -17,7 +17,7 @@ var slime = { players: 4, xJump: 2.5, yJump: 6, chargeSpeed: 0.05, knockoutVeloc
 // Save { players: 4, xJump: 2.5, yJump: 6.2, chargeSpeed: 0.05, knockoutVelocity: 2, michCharge: 0.2, respawnSpeed: 0.005 };
 
 var presetSlime = {
-  class: "Slime", type: 0, enabled: false, xVel: 0, yVel: 0, ledgeSlip: 0, xSpawn: 0, ySpawn: 4 * 16, charge: 0, radius: 7, deathTimer: 0,
+  class: "Slime", type: 0, enabled: true, xVel: 0, yVel: 0, ledgeSlip: 0, xSpawn: 0, ySpawn: 4 * 16, charge: 0, radius: 7, deathTimer: 0,
   leftKey: 0, rightKey: 0, idleBob: -0.5, blink: 0, hat: 0, yHat: 0, hatVel: 0
 };
 
