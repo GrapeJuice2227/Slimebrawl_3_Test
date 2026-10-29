@@ -10,7 +10,7 @@ function preload() {
 // Keys: <W E>  <I O> <C V> <Left Right>
 var controlKeys = [{ left: 87, right: 69 }, { left: 73, right: 79 }, { left: 67, right: 86 }, { left: 37, right: 39 }];
 
-var world = { zoom: 7, width: 16 * 16, height: 8 * 16, g: 0.5, airResistance: 0.02, groundFriction: 0.2 };
+var world = { zoom: 6, width: 16 * 16, height: 8 * 16, g: 0.5, airResistance: 0.02, groundFriction: 0.2 };
 var game = { mode: "Menu", firstLoopOnMode: false, bombSpawnCooldown: 600, entityRepulsion: 1.2 };
 var ballGame = { aScore: 0, bScore: 0, scoreCooldown: 0 };
 var slime = { players: 4, xJump: 2.5, yJump: 6, chargeSpeed: 0.05, knockoutVelocity: 3, michCharge: 0.25, respawnSpeed: 0.005 };
@@ -425,9 +425,8 @@ function debugRender() {
 //________________________________ Key Pressed
 function keyPressed() {
   if (key == "`") { debug = !debug; }
-  if (key == "q") { pauseFrame = !pauseFrame; }
-  if (key == "=") { for (i = 0; i < entities.length; i++) { entities[i].hat++; } }
-  if (key == "-") { for (i = 0; i < entities.length; i++) { entities[i].hat--; } }
+  if (key == "=") { world.zoom++; }
+  if (key == "-") { world.zoom--; } }
   if (key == ".") { run(); }
 
   if (key == " ") { if (game.mode == "Menu") { game.mode = "Brawl" } else game.mode = "Menu" }
